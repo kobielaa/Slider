@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project</title>
+	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+	
+
+    
+</head>
+<body>
+	<div class='container'>
+
+		<section class="slider">
+			<div class="row">
+				<div class="slider-half">
+					<h1 class="title-slider">Your title can be long and descriptive</h1>
+					<p class="slider-title-description">Cursuspenatisaccum ut curabitur nulla tellus tor ames a in curabitur pede. Idet mollisi eros dis orci congue elis et curabitur.</p>
+					<button class="read-more">READ MORE</button>
+				</div>
+
+				<div class="slider-half">
+					<img src="img/arrow-left.png" alt="" class="arrow-left">
+					<div id="slider">
+						<img src="img/slide1.png" alt="" class="slide active">
+						<img src="img/slide2.png" alt="" class="slide">
+						<img src="img/slide3.png" alt="" class="slide">
+					</div>
+					<img src="img/arrow-right.png" alt="" class="arrow-right">
+					
+				</div>
+			</div>
+		</section>
+
+	
+
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		$('.arrow-right').on('click',function(){
+			var currentImg = $('.active');
+			var nextImg = currentImg.next();
+
+			if(nextImg.length){
+				currentImg.removeClass('active');
+				nextImg.addClass('active');
+			}
+		})
+		$('.arrow-left').on('click',function(){
+			var currentImg = $('.active');
+			var prevImg = currentImg.prev();
+
+			if(prevImg.length){
+				currentImg.removeClass('active');
+				prevImg.addClass('active');
+			}
+		})
+	</script>
+</body>
+</html>
